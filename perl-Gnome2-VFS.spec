@@ -3,8 +3,8 @@
 
 Summary: Perl module for the gnome2-2.x VFS libraries
 Name:    perl-%module
-Version: 1.070
-Release: %mkrel 2
+Version: 1.080
+Release: %mkrel 1
 License: GPL or Artistic
 Group:   Development/GNOME and GTK+
 # http://sourceforge.net/project/showfiles.php?group_id=64773&package_id=102457
