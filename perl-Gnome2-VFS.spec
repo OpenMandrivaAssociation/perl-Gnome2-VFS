@@ -14,6 +14,7 @@ BuildRequires: libgnome-vfs2-devel => 2.6, perl-Glib => 1.00, perl-Gtk2
 BuildRequires: perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig 
 Requires: perl-Glib >= 1.00, libgnome-vfs2 >= 2.6
 Conflicts: drakxtools < 9.1-15mdk
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides perl access to GNOME-2.x VFS libraries.
