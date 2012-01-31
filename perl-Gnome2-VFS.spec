@@ -1,19 +1,19 @@
 %define module Gnome2-VFS
 %define fmodule Gnome2/VFS
 
-Summary: Perl module for the gnome2-2.x VFS libraries
-Name:    perl-%module
-Version: 1.081
+Summary:	Perl module for the gnome2-2.x VFS libraries
+Name:		perl-%{module}
+Version:	1.081
 Release:	9
-License: LGPLv2.1+
-Group:   Development/GNOME and GTK+
+License:	LGPLv2.1+
+Group:		Development/GNOME and GTK+
 # http://sourceforge.net/project/showfiles.php?group_id=64773&package_id=102457
-Source:  %module-%version.tar.bz2
-URL: http://gtk2-perl.sf.net/
-BuildRequires: pkgconfig(gnome-vfs-2.0) perl-Glib => 1.00, perl-Gtk2
-BuildRequires: perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig 
-Requires: perl-Glib >= 1.00 pkgconfig(gnome-vfs-2.0)
-Conflicts: drakxtools < 9.1-15mdk
+Source0:	%{module}-%{version}.tar.bz2
+URL:		http://gtk2-perl.sf.net/
+BuildRequires:	pkgconfig(gnome-vfs-2.0) perl-Glib => 1.00, perl-Gtk2
+BuildRequires:	perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig 
+Requires	perl-Glib >= 1.00 pkgconfig(gnome-vfs-2.0)
+Conflicts:	drakxtools < 9.1-15mdk
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -24,7 +24,7 @@ system operations like reading, writing and copying files, listing
 directories and so on.
 
 %prep
-%setup -q -n %module-%version
+%setup -q -n %{module}-%{version}
 find -type d -name CVS | rm -rf 
 
 %build
@@ -41,7 +41,6 @@ rm -rf %{buildroot}
 %clean
 rm -rf %{buildroot}
 
-
 %files
 %defattr(-, root, root)
 %doc LICENSE examples/*
@@ -49,5 +48,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/%fmodule
 %{perl_vendorarch}/%fmodule.pm
 %{perl_vendorarch}/auto/%fmodule
-
-
