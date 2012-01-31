@@ -1,5 +1,5 @@
-%define module Gnome2-VFS
-%define fmodule Gnome2/VFS
+%define	module	Gnome2-VFS
+%define	fmodule	Gnome2/VFS
 
 Summary:	Perl module for the gnome2-2.x VFS libraries
 Name:		perl-%{module}
@@ -12,9 +12,8 @@ Source0:	%{module}-%{version}.tar.bz2
 URL:		http://gtk2-perl.sf.net/
 BuildRequires:	pkgconfig(gnome-vfs-2.0) perl-Glib => 1.00, perl-Gtk2
 BuildRequires:	perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig 
-Requires	perl-Glib >= 1.00 pkgconfig(gnome-vfs-2.0)
+Requires:	perl-Glib >= 1.00 pkgconfig(gnome-vfs-2.0)
 Conflicts:	drakxtools < 9.1-15mdk
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides perl access to GNOME-2.x VFS libraries.
@@ -25,24 +24,15 @@ directories and so on.
 
 %prep
 %setup -q -n %{module}-%{version}
-find -type d -name CVS | rm -rf 
 
 %build
-RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
-export GTK2_PERL_CFLAGS="$RPM_OPT_FLAGS"
 perl Makefile.PL INSTALLDIRS=vendor
-make OPTIMIZE="$RPM_OPT_FLAGS"
-#%make test || :
+%make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-, root, root)
 %doc LICENSE examples/*
 %{_mandir}/*/*
 %{perl_vendorarch}/%fmodule
