@@ -10,9 +10,9 @@ Group:   Development/GNOME and GTK+
 # http://sourceforge.net/project/showfiles.php?group_id=64773&package_id=102457
 Source:  %module-%version.tar.bz2
 URL: http://gtk2-perl.sf.net/
-BuildRequires: libgnome-vfs2-devel => 2.6, perl-Glib => 1.00, perl-Gtk2
+BuildRequires: pkgconfig(gnome-vfs-2.0) perl-Glib => 1.00, perl-Gtk2
 BuildRequires: perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig 
-Requires: perl-Glib >= 1.00, libgnome-vfs2 >= 2.6
+Requires: perl-Glib >= 1.00 pkgconfig(gnome-vfs-2.0)
 Conflicts: drakxtools < 9.1-15mdk
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
