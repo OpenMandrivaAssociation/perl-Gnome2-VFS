@@ -10,6 +10,7 @@ Group:		Development/GNOME and GTK+
 # http://sourceforge.net/project/showfiles.php?group_id=64773&package_id=102457
 Url:		http://gtk2-perl.sf.net/
 Source0:	%{module}-%{version}.tar.bz2
+Source100:	%{name}.rpmlintrc
 BuildRequires:	perl-Glib => 1.00
 BuildRequires:	perl-Gtk2
 BuildRequires:	perl-ExtUtils-Depends
