@@ -28,19 +28,19 @@ system operations like reading, writing and copying files, listing
 directories and so on.
 
 %prep
-%setup -qn %{module}-%{version}
+%autosetup -p1 -n %{module}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
 %make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc LICENSE examples/*
 %{perl_vendorarch}/%{fmodule}
 %{perl_vendorarch}/%{fmodule}.pm
 %{perl_vendorarch}/auto/%{fmodule}
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
