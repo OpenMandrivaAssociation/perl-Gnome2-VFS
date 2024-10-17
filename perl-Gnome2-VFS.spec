@@ -8,7 +8,7 @@ Release:	22
 License:	LGPLv2.1+
 Group:		Development/GNOME and GTK+
 # http://sourceforge.net/project/showfiles.php?group_id=64773&package_id=102457
-Url:		http://gtk2-perl.sf.net/
+Url:		https://gtk2-perl.sf.net/
 Source0:	%{module}-%{version}.tar.bz2
 Source100:	%{name}.rpmlintrc
 BuildRequires:	perl-Glib => 1.00
